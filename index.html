@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Kildehenvisnings Bot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Automatisk Kildehenvisning</h1>
+
+        <label for="input-type">Vælg kilde type:</label>
+        <select id="input-type">
+            <option value="doi">URL</option>
+            <option value="isbn">2</option>
+            <option value="url">Bog</option>
+        </select>
+
+        <label for="kilde-input">Indsæt din kilde:</label>
+        <input type="text" id="kilde-input" placeholder="Indtast URL for kilden">
+
+        <label for="style">Vælg tekst stil:</label>
+        <select id="style">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+        <button onclick="hentMetadata()">Hent data og generer kildehenvisning</button>
+
+        <div class="result" id="result"></div>
+        <div id="loading" class="loading hidden">Henter data...</div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
